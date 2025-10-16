@@ -40,6 +40,7 @@ class Trainer:
 
 
     def save_model(self):
+        os.makedirs(self.store_path, exist_ok=True)
         model_path = os.path.join(self.store_path, 'model.pkl')
         joblib.dump(self.model, model_path)
         
