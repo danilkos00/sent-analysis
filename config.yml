@@ -1,0 +1,53 @@
+data:
+  train_path: data/train.csv
+  test_path: data/test.csv
+
+processing:
+  max_features: 1000
+  min_df: 100
+  max_df: 0.9
+  stop_words: english
+  # spacy_model: en_core_web_md
+
+# model:
+#   name: LGBMClassifier
+#   store_path: models/
+#   params:
+#     max_depth: 6
+#     num_leaves: 31
+#     n_estimators: 150
+#     learning_rate: 0.1
+#     random_state: 42
+#     class_weight: balanced
+#     # is_unbalance: True
+#     verbosity: 0
+model:
+  name: LGBMClassifier
+  store_path: models/
+  threshold: 0.6
+  params:
+    n_estimators: 760
+    learning_rate: 0.05174596593757736
+    num_leaves: 115
+    max_depth: 5
+    min_child_samples: 40
+    min_child_weight: 0.06710200968335898
+    reg_alpha: 0.00380280179886376
+    reg_lambda: 0.00644122913399601
+    subsample: 0.6703133002315746
+    colsample_bytree: 0.8327985391197683
+    subsample_freq: 1
+    scale_pos_weight: 0.47728196229934794
+    objective: binary
+    metric: binary_logloss
+    verbosity: -1
+    boosting_type: gbdt
+    random_state: 42
+    n_jobs: -1
+# model:
+#   name: LogisticRegression
+#   store_path: models/
+#   params:
+#     penalty: l2
+#     random_state: 42
+#     class_weight: balanced
