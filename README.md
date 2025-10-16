@@ -40,3 +40,27 @@ Validation Macro F1-score with a strong class imbalance: 0.78
   <img src="https://github.com/danilkos00/sent-analysis/blob/main/figures/pr-curve_0.png?raw=true" width="400"/>
 </p>
 
+## Project Structure
+
+```
+sent-analysis/
+├── data/
+│   ├── train.csv
+│   └── test.csv
+├── src/
+│   ├── data_ingestion.py
+│   ├── data_processing.py
+│   ├── train.py
+│   └── predict.py
+├── models/
+│   └── model.pkl
+├── app.py
+├── dataset.py
+├── main.py
+├── config.yml
+├── Makefile
+├── dockerfile
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
