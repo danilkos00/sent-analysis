@@ -9,33 +9,37 @@ processing:
   stop_words: english
 
 model:
-  name: LGBMClassifier
+  threshold: 0.5
+  name: LogisticRegression
   store_path: models/
-  threshold: 0.6
   params:
-    n_estimators: 760
-    learning_rate: 0.05174596593757736
-    num_leaves: 115
-    max_depth: 5
-    min_child_samples: 40
-    min_child_weight: 0.06710200968335898
-    reg_alpha: 0.00380280179886376
-    reg_lambda: 0.00644122913399601
-    subsample: 0.6703133002315746
-    colsample_bytree: 0.8327985391197683
-    subsample_freq: 1
-    scale_pos_weight: 0.47728196229934794
-    objective: binary
-    metric: binary_logloss
-    verbosity: -1
-    boosting_type: gbdt
     random_state: 42
-    n_jobs: -1
+    C: 2.4503790749492462
+    solver: saga
+    max_iter: 518
+    penalty: elasticnet
+    l1_ratio: 0.9827358299887912
 
 # model:
-#   name: LogisticRegression
+#   name: LGBMClassifier
 #   store_path: models/
+#   threshold: 0.5
 #   params:
-#     penalty: l2
+#     n_estimators: 195
+#     learning_rate: 0.1523434797040454
+#     num_leaves: 135
+#     max_depth: 6
+#     min_child_samples: 56
+#     min_child_weight: 1.4994784066891995
+#     reg_alpha: 0.0312037757796364
+#     reg_lambda: 0.018297504840273923
+#     subsample: 0.6240924502860006
+#     colsample_bytree: 0.9219551515815491
+#     subsample_freq: 7
+#     scale_pos_weight: 0.5841087905390343
+#     objective: binary
+#     metric: binary_logloss
+#     verbosity: -1
+#     boosting_type: gbdt
 #     random_state: 42
-#     class_weight: balanced
+#     n_jobs: -1
