@@ -31,6 +31,18 @@ pip install -r requirements.txt
 uvicorn app:app --reload
 ```
 
+## Building and Running Docker Image
+
+### Build the Docker image
+```bash
+docker build -t <image_name> .
+```
+
+### Run the container
+```bash
+docker run -d -p 80:80 <image_name>
+```
+
 ## Results
 Validation Macro F1-score with a strong class imbalance: 0.78
 
@@ -64,3 +76,4 @@ sent-analysis/
 ├── requirements.txt
 └── README.md
 ```
+
